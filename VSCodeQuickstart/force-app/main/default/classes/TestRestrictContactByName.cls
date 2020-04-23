@@ -3,12 +3,12 @@ private class TestRestrictContactByName {
     @isTest static void TestDeleteAccountLastname() {
 
         // Perform test
-        //Test.startTest();
+        Test.startTest();
         Contact contatinho = new Contact(FirstName='Test4', LastName='INVALIDNAME');
         //insert acct;
         Database.SaveResult result = Database.insert(contatinho, false);
         System.debug('DEBUG: ' + result.getErrors());
-        //Test.stopTest();
+        Test.stopTest();
 
         // Verify 
         // In this case the deletion should have been stopped by the trigger,
